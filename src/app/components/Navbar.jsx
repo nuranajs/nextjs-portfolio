@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import { Button, TextInput } from 'flowbite-react';
+
 
 const navLinks = [
   {
@@ -21,10 +23,6 @@ const navLinks = [
   },
   {
     title: "Contact",
-    path: "#contact",
-  },
-  {
-    title: "Login",
     path: "#contact",
   },
 ];
@@ -69,6 +67,11 @@ const Navbar = () => {
                 <NavLink href={link.path} title={link.title} />
               </li>
             ))}
+            <Link href='/sign-in'>
+          <Button gradientDuoTone='purpleToBlue' outline>
+              Sign In
+            </Button>
+            </Link>
           </ul>
         </div>
         
